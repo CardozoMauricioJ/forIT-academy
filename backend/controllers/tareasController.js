@@ -5,6 +5,19 @@ const getTareas = (req, res) => {
     res.json(tareas);
 }
 
+// GET: obtener tarea por ID
+const getTareaPorId = (req, res) => {
+    const { id } = req.params;
+    const tarea = tareas.find(t => t.id === id);
+
+    if (!tarea) {
+        return res.status(404).json({ error: 'Tarea no encontrada' });
+    }
+
+    res.json(tarea);
+};
+
+
 // POST: agregar Tarea
 const addTarea = (req, res) => {
     const { titulo, descripcion } = req.body;
@@ -50,6 +63,7 @@ const deleteTarea = (req, res) => {
 
 module.exports = {
     getTareas,
+    getTareaPorId,
     addTarea,
     updateTarea,
     deleteTarea
