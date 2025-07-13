@@ -1,8 +1,16 @@
+import { useNavigate } from "react-router-dom";
+
 function TaskItem({ tarea, onDelete }) {
+  const navigate = useNavigate();
+
   const handleDelete = () => {
     if (window.confirm('¿Estas seguro de eliminar esta tarea?')) {
         onDelete(tarea.id);
     }
+  }
+
+  const handleEdit = () => {
+    navigate(`/editar/${tarea.id}`)
   }
     
   return (
@@ -21,9 +29,15 @@ function TaskItem({ tarea, onDelete }) {
           </h5>
           <p className="card-text">{tarea.descripcion}</p>
         </div>
-        <button className="btn btn-danger btn-sm" onClick={handleDelete}>
-          Eliminar
-        </button>
+
+        <div className="d-flex flex-column gap-2">
+            <button className="btn btn-primary btn-sm" onClick={handleEdit}>
+                Editar
+            </button>
+            <button className="btn btn-danger btn-sm" onClick={handleDelete}>
+            Eliminar
+            </button>
+        </div>
       </div>
     </li>
   );

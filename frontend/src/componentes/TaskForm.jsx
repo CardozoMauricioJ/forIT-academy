@@ -15,7 +15,7 @@ function TaskForm() {
             fetch(`http://localhost:3000/api/tareas/${id}`)
             .then((res) => {
                 if (!res.ok) throw new Error('No se encontro la tarea');
-                return res.json;
+                return res.json();
             })
             .then((data) => {
                 setTitulo(data.titulo);
@@ -48,7 +48,7 @@ function TaskForm() {
             <h3>{id ? 'Editar Tarea' : 'Nueva Tarea'}</h3>
             {error && <div className="alert alert-danger">{error}</div>}
 
-            <form onSubmit="{handleSubmit}">
+            <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="titulo" className="form-label">Título</label>
                     <input
