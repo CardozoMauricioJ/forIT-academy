@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function TaskForm() {
     const [titulo, setTitulo] = useState('');
     const [descripcion, setDescripcion] = useState('');
@@ -12,7 +14,7 @@ function TaskForm() {
 
     useEffect(() => {
         if (id) {
-            fetch(`http://localhost:3000/api/tareas/${id}`)
+            fetch(`${API_URL}/tareas/${id}`)
             .then((res) => {
                 if (!res.ok) throw new Error('No se encontro la tarea');
                 return res.json();
@@ -31,8 +33,8 @@ function TaskForm() {
         setError('');
 
         const method = id ? 'PUT' : 'POST';
-        const url = id ? `http://localhost:3000/api/tareas/${id}`
-        : `http://localhost:3000/api/tareas`;
+        const url = id ? `${API_URL}/tareas/${id}`
+        : `${API_URL}/tareas`;
 
         fetch(url, {
             method,

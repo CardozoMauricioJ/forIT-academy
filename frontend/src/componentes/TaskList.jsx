@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import TaskItem from './TaskItem';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function TaskList() {
   const [tareas, setTareas] = useState([]);
   const [error, setError] = useState('');
@@ -10,7 +12,7 @@ function TaskList() {
   }, []);
 
   const cargarTareas = () => {
-    fetch('http://localhost:3000/api/tareas')
+    fetch('${API_URL}/tareas')
       .then((res) => {
         if (!res.ok) throw new Error('Error al cargar tareas');
         return res.json();
@@ -20,7 +22,7 @@ function TaskList() {
   }
 
   const eliminarTarea = (id) => {
-    fetch('http://localhost:3000/api/tareas/{id}', {
+    fetch('${API_URL}/tareas/{id}', {
         method: 'DELETE',})
         .then(() => {
             setTareas(tareas.filter((t) => t.id !== id));
