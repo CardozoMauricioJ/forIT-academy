@@ -1,9 +1,11 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const app = express();
-require('dotenv').config();
 
 
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -14,8 +16,7 @@ app.use('/api/tareas', tareasRoutes);
 
 
 // Iniciar servidor
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`El servidor corre en el puerto http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`El servidor corre en el puerto http://localhost:${PORT}`);
     
 });

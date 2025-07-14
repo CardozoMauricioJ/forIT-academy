@@ -12,7 +12,7 @@ function TaskList() {
   }, []);
 
   const cargarTareas = () => {
-    fetch('${API_URL}/tareas')
+    fetch(`${API_URL}/tareas`)
       .then((res) => {
         if (!res.ok) throw new Error('Error al cargar tareas');
         return res.json();
@@ -22,7 +22,7 @@ function TaskList() {
   }
 
   const eliminarTarea = (id) => {
-    fetch('${API_URL}/tareas/{id}', {
+    fetch(`${API_URL}/tareas/${id}`, {
         method: 'DELETE',})
         .then(() => {
             setTareas(tareas.filter((t) => t.id !== id));
@@ -31,7 +31,7 @@ function TaskList() {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="w-100" style={{ maxWidth: '700px' }}>
       <h2 className="mb-4 text-center">Lista de Tareas</h2>
 
       {error && <div className="alert alert-danger">{error}</div>}
