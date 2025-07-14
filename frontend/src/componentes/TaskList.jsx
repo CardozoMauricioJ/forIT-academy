@@ -31,7 +31,7 @@ function TaskList() {
   }
 
   return (
-    <div className="w-100" style={{ maxWidth: '700px' }}>
+    <div className="mx-auto" style={{ maxWidth: '700px' }}>
       <h2 className="mb-4 text-center">Lista de Tareas</h2>
 
       {error && <div className="alert alert-danger">{error}</div>}

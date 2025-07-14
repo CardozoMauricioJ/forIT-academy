@@ -46,7 +46,7 @@ function TaskForm() {
     }
 
     return (
-        <div className="card p-4">
+        <div className="card p-4 mx-auto" style={{ maxWidth: '600px' }}>
             <h3>{id ? 'Editar Tarea' : 'Nueva Tarea'}</h3>
             {error && <div className="alert alert-danger">{error}</div>}
 
