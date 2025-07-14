@@ -22,6 +22,7 @@ Aplicación web desarrollada como parte del challenge técnico para demostrar co
 ### 1. Clonar el repositorio
 
 git clone https://github.com/CardozoMauricioJ/forIT-academy.git
+
 cd forIT-academy
 
 ### 2. Configurar variables de entorno
@@ -38,24 +39,30 @@ VITE_API_URL=http://localhost:3000
 
 ### 3. Instalar dependencias
 
-# Backend
+### Backend
+
 cd backend
+
 npm install
 
-# Frontend
+### Frontend
+
 cd ../frontend
+
 npm install
 
 ### 4. Ejecutar la aplicación
 
-# Iniciar el backend
+### Iniciar el backend
 
 cd ../backend
+
 node index.js
 
-# En una nueva terminal, iniciar el frontend
+### En una nueva terminal, iniciar el frontend
 
 cd ../frontend
+
 npm run dev
 
 Backend disponible en: http://localhost:3000
