@@ -28,6 +28,9 @@ function TaskItem({ tarea, onDelete }) {
                 )}
           </h5>
           <p className="card-text">{tarea.descripcion}</p>
+          <p className="text-muted mb-0">
+            <small> {new Date(tarea.creacion).toLocaleString()}</small>
+          </p>
         </div>
 
         <div className="d-flex flex-column gap-2">
