@@ -2,7 +2,7 @@
 
 Aplicación web desarrollada como parte del challenge técnico para demostrar conocimientos en Git, JavaScript, Node.js, Express y React.
 
-## 🧾 Funcionalidades
+## Funcionalidades
 
 - Ver lista de tareas
 - Crear nueva tarea
@@ -11,12 +11,13 @@ Aplicación web desarrollada como parte del challenge técnico para demostrar co
 - Eliminar tarea
 - Visualizar fecha y hora de creación
 
-## 🗂️ Estructura del proyecto
+## Estructura del proyecto
 
 /backend -> API desarrollada con Node.js y Express
+
 /frontend -> Aplicación React desarrollada con Vite
 
-## 🚀 Cómo ejecutar el proyecto
+## Cómo ejecutar el proyecto
 
 ### 1. Clonar el repositorio
 
@@ -24,19 +25,19 @@ Aplicación web desarrollada como parte del challenge técnico para demostrar co
 git clone https://github.com/CardozoMauricioJ/forIT-academy.git
 cd forIT-academy
 
-2. Configurar variables de entorno
+### 2. Configurar variables de entorno
 
 Crear los siguientes archivos:
 
-📁 backend/.env
+backend/.env
 
 PORT=3000
 
-📁 frontend/.env
+frontend/.env
 
 VITE_API_URL=http://localhost:3000
 
-3. Instalar dependencias
+### 3. Instalar dependencias
 
 # Backend
 cd backend
@@ -46,13 +47,15 @@ npm install
 cd ../frontend
 npm install
 
-4. Ejecutar la aplicación
+### 4. Ejecutar la aplicación
 
 # Iniciar el backend
+
 cd ../backend
 node index.js
 
 # En una nueva terminal, iniciar el frontend
+
 cd ../frontend
 npm run dev
 
@@ -60,23 +63,23 @@ Backend disponible en: http://localhost:3000
 
 Frontend disponible en: http://localhost:5173
 
-Capturas de pantalla
+## Capturas de pantalla
 
-Pantalla principal
+### Pantalla principal
 ![Pantalla principal](image.png)
 
-Editar de tarea
+### Editar de tarea
 ![Editar tarea](image-1.png)
 
-Nueva tarea
+### Nueva tarea
 ![Nueva tarea](image-2.png)
 
-Tecnologías utilizadas
+## Tecnologías utilizadas
 
-Frontend: React, Vite, Bootstrap
+- Frontend: React, Vite, Bootstrap
 
-Backend: Node.js, Express
+- Backend: Node.js, Express
 
-Control de versiones: Git y GitHub
+- Control de versiones: Git y GitHub
 
-Linter: ESLint con configuración recomendada
+- Linter: ESLint con configuración recomendada
