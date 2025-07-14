@@ -21,7 +21,6 @@ Aplicación web desarrollada como parte del challenge técnico para demostrar co
 
 ### 1. Clonar el repositorio
 
-```bash
 git clone https://github.com/CardozoMauricioJ/forIT-academy.git
 cd forIT-academy
 
